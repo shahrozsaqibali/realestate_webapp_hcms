@@ -4,7 +4,8 @@
   "info": {
     "singularName": "project",
     "pluralName": "projects",
-    "displayName": "Project"
+    "displayName": "Project",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,11 +17,12 @@
       "required": true
     },
     "project_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "locations": {
       "type": "relation",
@@ -62,11 +64,12 @@
       "component": "project-assets.project-assets"
     },
     "imageslideshow": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "furtherdetail": {
       "type": "component",
@@ -81,6 +84,9 @@
         "Residential",
         "Condo Towns"
       ]
+    },
+    "occupancy": {
+      "type": "string"
     }
   }
 }

@@ -921,6 +921,7 @@ export interface ApiProjectProject extends Schema.CollectionType {
     singularName: 'project';
     pluralName: 'projects';
     displayName: 'Project';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -957,6 +958,7 @@ export interface ApiProjectProject extends Schema.CollectionType {
     propertytype: Attribute.Enumeration<
       ['Bungalows', 'Commercial', 'Residential', 'Condo Towns']
     >;
+    occupancy: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
