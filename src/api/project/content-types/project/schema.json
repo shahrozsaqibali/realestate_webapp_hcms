@@ -1,0 +1,86 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "Project"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "project_name": {
+      "type": "string",
+      "required": true
+    },
+    "project_image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "locations": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::location.location",
+      "inversedBy": "projects"
+    },
+    "developer": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::developer.developer"
+    },
+    "tag": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::tag.tag",
+      "inversedBy": "projects"
+    },
+    "highlight": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::highlight.highlight",
+      "inversedBy": "projects"
+    },
+    "keydetail": {
+      "type": "component",
+      "repeatable": false,
+      "component": "keydetails.keydetails",
+      "required": true
+    },
+    "buyingreason": {
+      "type": "component",
+      "repeatable": false,
+      "component": "buyingreason.buyingreason"
+    },
+    "projectassets": {
+      "type": "component",
+      "repeatable": false,
+      "component": "project-assets.project-assets"
+    },
+    "imageslideshow": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "furtherdetail": {
+      "type": "component",
+      "repeatable": true,
+      "component": "furtherdetails.furtherdetails"
+    },
+    "propertytype": {
+      "type": "enumeration",
+      "enum": [
+        "Bungalows",
+        "Commercial",
+        "Residential",
+        "Condo Towns"
+      ]
+    }
+  }
+}

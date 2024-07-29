@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_projecthighlights_projecthighlights",
+  "info": {
+    "displayName": "projecthighlights"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "details": {
+      "type": "blocks"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_keydetails_keydetails",
+  "info": {
+    "displayName": "keydetails"
+  },
+  "options": {},
+  "attributes": {
+    "map": {
+      "type": "string"
+    },
+    "details": {
+      "type": "blocks"
+    }
+  }
+}
